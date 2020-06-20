@@ -11,7 +11,10 @@ Data Scraping from Indeed
 
 import pandas as pd
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup 
+import time
+from random import random
+
 
 
 def parse_from_single_co_page(input_url):
@@ -618,7 +621,8 @@ df_results = pd.DataFrame(
     columns=['Title', 'Company', 'Location', 'City', 'State', 'Zip_Code', 'Job_Desc', 'Num_Reviews', \
              'Review_Score', 'When_posted', 'Job_desc', 'URL_other_jobs'])
 
-for url in list_of_urls[:15]:
-    df_results = df_results.append(parse_from_single_co_page(url))
+for url in list_of_urls[:5]:
+     time.sleep(30*random.random) # put this is need to test it so that don't get throw off server
+     df_results = df_results.append(parse_from_single_co_page(url))
 df_results.to_csv('results.csv')
 print("done!")
