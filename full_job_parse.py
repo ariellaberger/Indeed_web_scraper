@@ -2,7 +2,7 @@
 Data Scraping from Indeed
 
 - Code that generates a long list of URLs that give full details of job openings.
-# TO DO - call code from module multiple_job_parse.py into here.
+
 
 - Code that receives the list of URLs, and parses appending into  a pandas dataframe.
 
@@ -12,6 +12,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
+# TO DO - call code from module multiple_job_parse.py into this module.
 
 def parse_from_single_co_page(input_url):
     """
@@ -39,14 +40,13 @@ def parse_from_single_co_page(input_url):
     except:
         location_ = None
     try:
-        city_state = location_[:-6] # TODO Create a list of US States, write a function to
-                                    #  Check for matching
-                                    #  Split into two fields, City and State
+        city_state = location_[:-6] #TODO Create a list of US States, write a function to check for matches.
+                                    #TODO Split into two fields, City and State.
 
     except:
         city_state = None
     try:
-        zip_code_ = int(location_[-6:])  # TODO Write a function to find digits
+        zip_code_ = int(location_[-6:])  #TODO Convert to integers.
     except:
         zip_code_ = None
     try:
@@ -54,8 +54,8 @@ def parse_from_single_co_page(input_url):
         # job_desc_ = page_soup.find("script", attrs={"body class": "miniRefresh"})
     except:
         job_desc_ = None
-        # TODO Run against use cases and find some kind of formatting heirarchy
-        #  Currently imported in bulk
+        
+        
     try:
         num_reviews_ = page_soup.find('div', attrs={"class": "icl-Ratings icl-Ratings--gold icl-Ratings--md"}).text[
                        :-55]
