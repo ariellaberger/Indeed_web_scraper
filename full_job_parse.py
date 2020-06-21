@@ -2,7 +2,7 @@
 Data Scraping from Indeed
 
 - Code that generates a long list of URLs that give full details of job openings.
-# TO DO Andrey- transfer code into here
+# TO DO - call code from module multiple_job_parse.py into here.
 
 - Code that receives the list of URLs, and parses appending into  a pandas dataframe.
 
