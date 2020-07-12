@@ -35,8 +35,8 @@ The output of main.py is the list of URLs which is further processed.
 
 **Current project implementation**
 
-- Currently, the project consists of two modules: `main_passage.py` and `Web_Scraping_AB1.py`
-    - #### main_passage.py
+- Currently, the project consists of two modules: `main_module.py`, `tools.py` and `db_manager.py`
+    - #### main_module.py
         - The module sequently parses pages with job posting snippets and grabs individual urls for further parsing by `    Web_Scraping_AB1.py.`The module has two key functions: `parse_positions_from_page()` and `parse_pages()`
             - `parse_positions_from_page()` works with pages where job posting snippets are published.
             - `parse_pages()` merges information obtained by `parse_positions_from_page()`
