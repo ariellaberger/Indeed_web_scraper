@@ -106,7 +106,7 @@ def parse_pages(base_url, final_page):
 
 
 def usage():
-    print('usage: main_passage.py <depth> ')
+    print('usage: multiple_job_parse.py <depth> ')
     print('<depth> is number of pages to parse; each page typically consists of 10 job positions')
     print('<depth> must be more than 10 and less or equal to 50 pages currently')
     print('number of pages will be rounded to the nearest ten')

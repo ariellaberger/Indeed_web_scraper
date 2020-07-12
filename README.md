@@ -54,6 +54,7 @@ The output of main.py is the list of URLs which is further processed.
 
 ### TODOs
 
+- Make requirements.md readable
 - Improve script execution with arguments
     - depth argument may be redesgined to more intuitive.
 - Improved parser of the individual page with full job description.
