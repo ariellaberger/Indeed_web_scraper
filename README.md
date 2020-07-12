@@ -56,3 +56,26 @@
         - "a company decreased its activity on hiring people"
   - Elaborate database structure
 
+# Database structure
+
+Name of the database: `jobs.db`
+
+Consists of 3 tables, the main table is `job_postings`
+
+<img src="images/db_structure.png" alt="images/db_structure.png" style="zoom: 50%;" />
+
+**Table `job_postings`**
+
+Primary key: `posting_id`
+
+Foreign key: `company_id`
+
+**Table `companies`**
+
+Primary key: `company_id`
+
+**Table `requirements`**
+
+Primary key: `req_id`
+
+Foreign key: `job_postings`
