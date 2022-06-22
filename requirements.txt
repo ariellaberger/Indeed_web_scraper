@@ -34,7 +34,7 @@ munch==2.3.2
 mysql-connector-python==8.0.20
 nbformat==4.4.0
 networkx==2.2
-numpy==1.16.1
+numpy==1.22.0
 osmnx==0.9
 OWSLib==0.17.1
 pandas==0.24.2
